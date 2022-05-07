@@ -12,3 +12,8 @@ terraform {
 provider "azurerm" {
   features {}
 }
+
+resource "azurerm_resource_group" "RG-Azure-SQL-01" {
+  name = "U-SC-RG-Azure-SQL-01"
+  location = "Sweden Central"
+}
