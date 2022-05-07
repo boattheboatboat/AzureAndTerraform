@@ -21,7 +21,7 @@ resource "azurerm_resource_group" "RG-Azure-SQL-01" {
 
 resource "azurerm_storage_account" "SA-Azure-SQL-01" {
   name                     = "uscsaazuresql01"
-  resource_group_name      = azurerm_resource_group.RG-Azure-SQL-01.id
+  resource_group_name      = azurerm_resource_group.RG-Azure-SQL-01.name
   location                 = var.UAT-Azure-Location
   account_tier             = var.UAT-Azure-Account_tier
   account_replication_type = var.UAT-Azure-account_replication_type
@@ -30,7 +30,7 @@ resource "azurerm_storage_account" "SA-Azure-SQL-01" {
 
 resource "azurerm_mssql_server" "SQLSRV-Azure-SQL-01" {
   name                         = "u-sc-sql-srv-01"
-  resource_group_name          = azurerm_resource_group.RG-Azure-SQL-01.id
+  resource_group_name          = azurerm_resource_group.RG-Azure-SQL-01.name
   location                     = var.UAT-Azure-Location
   version                      = "12.0"
   administrator_login          = "dbajimhil"
