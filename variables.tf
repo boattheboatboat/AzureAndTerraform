@@ -17,7 +17,7 @@ variable "UAT-Azure-Location" {
 variable "UAT-Azure-Account_tier" {
   type        = string
   description = "Sets the account tier for Storage Accounts in UAT"
-  default     = "Standard"
+  default     = "Premium"
 }
 
 variable "UAT-Azure-account_replication_type" {
