@@ -50,3 +50,5 @@ resource "azurerm_mssql_database" "SQlDB-Azure-SQL-01" {
   zone_redundant = true
   tags           = var.UAT-Azure-Tags
 }
+
+#Just a Test
